@@ -2,8 +2,7 @@
 
 import { useAccount } from 'wagmi';
 import SwapComponents from 'src/components/SwapComponents';
-import Image from 'next/image';
-import tangcat from 'src/images/tangcat_clean.png';
+import tangcat from 'src/images/cartoon_tang.png';
 import LoginButton from 'src/components/LoginButton';
 
 export default function Page() {
@@ -12,33 +11,25 @@ export default function Page() {
   return (
     <div className="flex h-full w-96 max-w-full flex-col px-1 md:w-[1008px]">
       <section className="mt-6 mb-6 flex w-full flex-col md:flex-row">
-        
       </section>
-      <div className="flex items-center gap-3 justify-end">
+      <div className="flex items-right gap-3 justify-end">
             <LoginButton />
       </div>
-      <section className="templateSection flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-gray-100 px-2 py-4 md:grow">
-        <div>
-        <h1 className="text-4xl font-bold" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          $TANG Swapper
+      <section className="templateSection flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-custom px-2 py-4 md:grow">
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <img 
+          src={tangcat.src} // Replace with your image URL
+          alt="Description of the image" 
+          style={{ width: '200px', height: 'auto', marginRight: '20px', marginBottom: '70px' }} // Adjust width and margin as needed
+        />
+        <h1 className="text-5xl font-bold">
+          TANG CAT 
+          <br />
+          <hr style={{ margin: '10px 0', borderColor: '#000000' }} />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汤&nbsp;猫
         </h1>
-        </div>
-        <div className="flex w-full items-center justify-center mt-[-50px] mb-[-20px]">
-        
-          <Image 
-            src={tangcat} 
-            alt="tangcat" 
-            width={500} 
-            height={200} 
-            style={{objectFit: "contain"}} 
-            
-          />
-         
-        </div>
-
-  
-        <SwapComponents />  
-      
+      </div>
+        <SwapComponents /> 
       </section>
       <div>
       Made with Onchain Kit

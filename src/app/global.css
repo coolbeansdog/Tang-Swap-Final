@@ -5,8 +5,12 @@
 
 :root {
   /* Palette */
-  --palette-bg-black: #AACBF2;
+  --palette-bg-black: white;
   --palette-bg-white: rgb(21, 26, 38);
+  --bg-ock-primary-hover: #333333;
+  --bg-ock-primary: black;
+  --bg-ock-secondary: #AACBF2;
+  --bg-ock-secondary-active: #AACBF2;
 
   /* Indicates that the element can be rendered using 
    * the operating system dark color scheme. 
@@ -25,27 +29,28 @@ html {
   scroll-behavior: smooth;
 }
 
-html .font-robotoMono {
-  font-family: var(--font-roboto-mono);
+html .font-raleway {
+  font-family: 'Raleway', sans-serif !important;
 }
 
-html .font-inter {
-  font-family: var(--font-inter);
+.font-sans {
+  font-family: 'Raleway', sans-serif !important; /* Override OnchainKit */
 }
+
 
 body {
   height: 100%;
   margin: 0;
   background-color: var(--palette-bg-black);
   color: var(--palette-bg-white);
-  font-family: Inter, sans-serif;
+  font-family: 'Raleway', sans-serif !important;  
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none; /* Combine into one rule */
 }
 
 svg {
@@ -68,18 +73,13 @@ ul {
   color: #030712;
 }
 
-/* i believe this is necessary because 
-of a div added by rainbowkit provider */
+/* This may be necessary due to a div added by the RainbowKit provider */
 body > div {
   height: 100%;
   max-width: 100vw;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
 .templateSection > div {
-  max-width: 100%;;
+  max-width: 100%;
 }

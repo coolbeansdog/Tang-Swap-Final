@@ -1,4 +1,5 @@
 'use client';
+
 import {
   Address,
   Avatar,
@@ -16,11 +17,14 @@ import {
   WalletDropdownLink,
 } from '@coinbase/onchainkit/wallet';
 
+import { base } from 'viem/chains'; 
+
 type WalletWrapperParams = {
   text?: string;
   className?: string;
   withWalletAggregator?: boolean;
 };
+
 export default function WalletWrapper({
   className,
   text,
@@ -32,13 +36,13 @@ export default function WalletWrapper({
         <ConnectWallet
           withWalletAggregator={withWalletAggregator}
           text={text}
-          className={className}
+          className={className} // Combine Raleway with other classes
         >
-          <Avatar className="h-6 w-6" />
-          <Name />
+          <Avatar />
+          <Name className='text-black' />
         </ConnectWallet>
         <WalletDropdown>
-          <Identity className="px-4 pt-3 pb-2" hasCopyAddressOnClick={true}>
+          <Identity hasCopyAddressOnClick={true}>
             <Avatar />
             <Name />
             <Address />

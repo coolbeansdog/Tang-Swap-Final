@@ -10,10 +10,13 @@ import {
   SwapSettingsSlippageDescription,
   SwapSettingsSlippageInput,
   SwapSettingsSlippageTitle,
+  SwapToast,
 } from '@coinbase/onchainkit/swap'; 
 import { Wallet, ConnectWallet } from '@coinbase/onchainkit/wallet';
 import { useAccount, useSendTransaction } from 'wagmi';
 import type { Token } from '@coinbase/onchainkit/token';
+import tangcat from 'src/images/cartoon_tang.png';
+const imageUrl: string = tangcat.src; 
 
 export default function SwapComponents() {
   const { address } = useAccount();
@@ -50,21 +53,21 @@ export default function SwapComponents() {
 
   return (
     address ? (
-      <Swap>
+      <Swap className='bg-[#AACBF2] text-black' title=' '>
         <SwapAmountInput className='bg-[#F0F0F0] text-white'
           label="Sell"
           swappableTokens={swappableTokens} 
           token={ETHToken} 
           type="from"
         />
-        <SwapToggleButton /> 
+        <SwapToggleButton className='border-[#AACBF2]'/> 
         <SwapAmountInput className='bg-[#F0F0F0] text-white'
           label="Buy"
           swappableTokens={swappableTokens} 
           token={TangToken} 
           type="to"
         /> 
-        <SwapButton className='bg-[#89CFF0] text-white'/> 
+        <SwapButton className='bg-[black] text-black'/> 
         {/* <SwapMessage />  */}
         <SwapSettings>
           <SwapSettingsSlippageTitle>
@@ -76,6 +79,7 @@ export default function SwapComponents() {
           </SwapSettingsSlippageDescription>
           <SwapSettingsSlippageInput />
         </SwapSettings>
+        <SwapToast />
       </Swap> 
     ) : (
       // The "Connect Wallet" button has been removed

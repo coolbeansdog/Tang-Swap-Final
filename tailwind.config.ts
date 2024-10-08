@@ -12,6 +12,11 @@ const config: Config = {
         xl: '1280px',
       },
     },
+    extend: {
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'], 
+      },
+    },
   },
   plugins: [],
 };
