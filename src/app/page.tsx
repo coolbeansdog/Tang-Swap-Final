@@ -4,6 +4,9 @@ import { useAccount } from 'wagmi';
 import SwapComponents from 'src/components/SwapComponents';
 import tangcat from 'src/images/cartoon_tang.png';
 import LoginButton from 'src/components/LoginButton';
+import { FundButton } from '@coinbase/onchainkit/fund';
+ 
+
 
 export default function Page() {
   const { address } = useAccount();
@@ -14,7 +17,7 @@ export default function Page() {
   </section>
 
   <div className="flex items-right gap-3 justify-end md:justify-end">
-    <LoginButton />
+    <LoginButton />   
   </div>
 
   <section className="templateSection flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-custom px-2 py-4 md:grow">
@@ -32,6 +35,8 @@ export default function Page() {
       </h1>
     </div>
     <SwapComponents />
+    <h1>Short on Funds?</h1>
+    <FundButton className='bg-[#AACBF2] text-black' text={'Fund Wallet'} hideIcon={true}  popupSize='sm'/>
   </section>
 
   <div className="text-center md:text-right">
