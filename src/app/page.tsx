@@ -2,7 +2,7 @@
 
 import { useAccount } from 'wagmi';
 import SwapComponents from 'src/components/SwapComponents';
-import tangcat from 'src/images/cartoon_tang.png';
+import tangcat from 'src/images/tang_base_ball_bat.png';
 import LoginButton from 'src/components/LoginButton';
 import { FundButton } from '@coinbase/onchainkit/fund';
  

@@ -54,14 +54,14 @@ export default function SwapComponents() {
   return (
     address ? (
       <Swap className='bg-[#AACBF2] text-black' title=' '>
-        <SwapAmountInput className='bg-[#F0F0F0] text-white'
+        <SwapAmountInput className='bg-[#F0F0F0] text-black'
           label="Sell"
           swappableTokens={swappableTokens} 
           token={ETHToken} 
           type="from"
         />
         <SwapToggleButton className='border-[#AACBF2]'/> 
-        <SwapAmountInput className='bg-[#F0F0F0] text-white'
+        <SwapAmountInput className='bg-[#F0F0F0] text-black'
           label="Buy"
           swappableTokens={swappableTokens} 
           token={TangToken} 

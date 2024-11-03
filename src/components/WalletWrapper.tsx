@@ -6,6 +6,7 @@ import {
   EthBalance,
   Identity,
   Name,
+  Socials,
 } from '@coinbase/onchainkit/identity';
 import {
   ConnectWallet,
@@ -46,6 +47,7 @@ export default function WalletWrapper({
             <Avatar />
             <Name />
             <Address />
+            <Socials/>
             <EthBalance />
           </Identity>
           <WalletDropdownBasename />

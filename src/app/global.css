@@ -3,21 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  :root {
   /* Palette */
-  --palette-bg-black: white;
-  --palette-bg-white: rgb(21, 26, 38);
-  --bg-ock-primary-hover: #cbd5e1;
-  --bg-ock-primary: black;
-  --bg-ock-secondary: #AACBF2;
-  --bg-ock-secondary-active: #AACBF2;
+  --ock-bg-primary-hover: #cbd5e1;
+  --ock-bg-primary: black !important;
+  --ock-bg-secondary: #AACBF2;
+  --ock-bg-secondary-active: #AACBF2;
 
   /* Indicates that the element can be rendered using 
    * the operating system dark color scheme. 
    * https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme */
   color-scheme: light;
+  }
 }
-
 *,
 *::before,
 *::after {
